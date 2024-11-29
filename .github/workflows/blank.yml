@@ -24,7 +24,7 @@ jobs:
 
     - name: Install vuepress
       run: |
-        npm init
+        npm init -y
         cat package.json
         npm install -D vuepress@next
         npm install -D @vuepress/bundler-vite@next @vuepress/theme-default@next
