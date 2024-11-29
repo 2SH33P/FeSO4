@@ -23,7 +23,10 @@ jobs:
         node-version: "12.x"
 
     - name: Install vuepress
-      run: npm init vuepress vuepress-starter
+      run: |
+        npm init
+        npm install -D vuepress@next
+        npm install -D @vuepress/bundler-vite@next @vuepress/theme-default@next
       
     - name: Build
       run: |
