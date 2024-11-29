@@ -19,9 +19,8 @@ jobs:
 
     - name: Install vuepress and build
       run: |
-        npm install -D vuepress@next
-        npm install -D @vuepress/bundler-vite@next @vuepress/theme-default@next
-        vuepress -h
+        npm install
+        npm run docs:build
 
     - name: Push
       uses: JamesIves/github-pages-deploy-action@v4
