@@ -4,11 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   Build:
     name: Build
@@ -25,10 +20,9 @@ jobs:
     - name: Install vuepress and build
       run: |
         npm init -y
-        cat package.json
         npm install -D vuepress@next
         npm install -D @vuepress/bundler-vite@next @vuepress/theme-default@next
-        vuepress build docs
+        vuepress -h
 
     - name: Push
       uses: JamesIves/github-pages-deploy-action@v4
